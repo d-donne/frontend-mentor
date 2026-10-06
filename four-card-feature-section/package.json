@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  },
+  "scripts": {
+    "build:tailwind": "tailwindcss -i ./src/input.css -o ./assets/css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "Donne",
+  "license": "ISC",
+  "description": ""
+}
+

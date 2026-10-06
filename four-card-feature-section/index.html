@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/output.css">
+  <title>Frontend Mentor | Four card feature section</title>
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body
+  class="bg-veryLightGray font-normal text-font-primary font-ff-primary text-[0.9375rem] grid place-items-center md:h-screen">
+
+  <div role="doc-introduction" class="flex flex-col gap-[4.125rem] w-full my-16 md:my-0 px-12 md:px-0"> <!-- main container-->
+    <div class="mx-auto text-center"> <!-- INTRO-->
+      <h1 class="font-extralight mb-3">Reliable, efficient delivery</h1>
+      <h1 class="mb-[1.5rem] font-semibold">Powered by Technology</h1>
+      <p class="text-sm md:px-0 max-w-[60ch] md:max-w-[54ch]  md:w-auto">
+        Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is
+        successful
+      </p>
+    </div>
+
+    <main class="grid gap-7 mx-auto md:grid-cols-2 lg:grid-cols-3"> <!-- SERVICES GRID CONTAINER -->
+      <div class="card bg-red-700 before:bg-cyan lg:row-start-2 lg:mt-[-8.5rem]"> <!-- supervisor -->
+        <h2>Supervisor</h2>
+        <p class="card-text">Monitors activity to identify project roadblocks</p>
+        <img src="assets/images/icon-supervisor.svg" alt="looking glass" class="card-img">
+      </div>
+
+      <div class="card before:bg-red lg:col-start-2"> <!-- team builder-->
+        <h2>Team Builder</h2>
+        <p class="card-text">Scans our talent network to create the optimal team for your project</p>
+        <img src="assets/images/icon-team-builder.svg" alt="team" class="card-img">
+      </div>
+
+      <div class="card before:bg-orange lg:row-start-2 lg:col-start-2"> <!-- karma -->
+        <h2>Karma</h2>
+        <p class="card-text">Regularly evaluates our talent to ensure quality</p>
+        <img src="assets/images/icon-karma.svg" alt="light bulb" class="card-img">
+      </div>
+
+      <div class="card before:bg-blue row-start-2 lg:mt-[-8.5rem]"> <!-- calculator -->
+        <h2>Calculator</h2>
+        <p class="card-text">Uses data from past projects to provide better delivery estimates</p>
+        <img src="assets/images/icon-calculator.svg" alt="monitor" class="card-img">
+      </div>
+    </main>
+  </div>
+
+
+  <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer> -->
+</body>
+
+</html>
