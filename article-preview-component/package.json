@@ -1,0 +1,14 @@
+{
+  "name": "article-preview-component",
+  "version": "1.0.0",
+  "description": "Frontend Mentor's Article Preview Component Challenge Solution using Tailwindcss and vanilla javascript",
+  "main": "index.js",
+  "scripts": {
+    "build:tailwind": "tailwind -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "author": "Donne",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}

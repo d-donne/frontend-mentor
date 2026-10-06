@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/output.css">
+  <title>Article preview component | Frontend Mentor</title>
+</head>
+
+<body class="font-ff-primary bg-light-grayish-blue text-[0.8125rem] md:h-screen grid md:place-items-center">
+
+
+  <main
+    class="bg-white md:h-[280px] xs:max-w-lg xs:mx-15% sm:mx-auto md:max-w-[732px] mx-6 mt-[4.6875rem] md:m-0 flex flex-col md:flex-row gap-[2.07rem] md:gap-0 rounded-lg overflow-x-hidden md:overflow-visible shadow-xl">
+
+    <div class="md:h-full">
+      <img src="images/drawers.jpg" alt="drawers" draggable="false"
+        class="object-cover object-[0_-1.1rem]  xs:h-auto md:object-[0_0] h-[12.5rem] md:h-full md:rounded-s-md w-full md:w-auto">
+    </div>
+
+    <div class=" flex flex-col gap-[1.1rem] md:w-[71%] md:px-10 md:pt-8 md:relative">
+      <div class="mx-[1.875rem] md:mx-0">
+        <h1 class="font-bold text-[1.04rem] md:text-[1.24rem] md:leading-7 text-very-dark-grayish-blue">
+          Shift the overall look and feel by adding these wonderful
+          touches to furniture in your home
+        </h1>
+        <p class="text-desaturated-dark-blue text-[0.84375rem] mt-[0.75rem]">
+          Ever been in a room and felt like something was missing? Perhaps
+          it felt slightly bare and uninviting. I’ve got some simple tips
+          to help you make any room feel complete.
+        </p>
+      </div>
+
+      <div class="relative md:static">
+        <div class="flex gap-4 pb-5 px-[1.875rem] md:px-0">
+          <img src="images/avatar-michelle.jpg" draggable="false" alt="michelle appleton" aria-labelledby="profile-name"
+            class="h-10 rounded-full">
+          <div>
+            <a id="profile-name" class="text-very-dark-grayish-blue font-bold hover:text-[#5caf78]">Michelle Appleton</a>
+            <p class="text-grayish-blue">28 Jun 2020</p>
+          </div>
+          <button id="shareBtn" class="bg-light-grayish-blue hover:bg-grayish-blue/50 mt-1 md:mt-0 share-btn "><img src="images/icon-share.svg"
+              alt="share button" class="mx-auto"></button>
+        </div>
+
+        <div id="social"
+          class="bg-very-dark-grayish-blue absolute bottom-0 px-[1.875rem] w-full h-full hidden gap-[7%] md:gap-4 items-center py-5 md:w-fit md:h-[3.5rem] md:rounded-xl md:right-[-3.8rem] md:bottom-[6rem]">
+          <span class="text-grayish-blue tracking-[0.3rem] mr-0.5">SHARE</span>
+          <a><img src="images/icon-facebook.svg" alt="facebook"></a>
+          <a><img src="images/icon-twitter.svg" alt="twitter"></a>
+          <a><img src="images/icon-pinterest.svg" alt="pinterest"></a>
+          <button class="bg-desaturated-dark-blue share-btn md:absolute md:top-[4.9rem] md:left-[6.44rem]"><img
+              src="images/icon-share-active.svg" alt="share button" draggable="false" class="mx-auto"></button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="dist/main.js"></script>
+</body>
+
+</html>
