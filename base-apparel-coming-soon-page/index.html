@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/output.css">
+  <title>Base Apparel coming soon page | Frontend Mentor</title>
+</head>
+
+<body
+  class="bg-[linear-gradient(135deg,_hsl(0,0%,100%),_hsl(0,100%,98%))] md:h-screen font-ff-primary text-base font-normal">
+
+  <header class="mx-7 my-8 md:my-6 md:m-0 md:absolute md:top-[2.55rem] md:left-[11%]">
+    <img src="assets/images/logo.svg" alt="base apparel logo" class="h-6 md:h-auto">
+  </header>
+
+  <main class="flex flex-col md:flex-row-reverse md:w-full md:h-full">
+    <picture>
+      <source media="(min-width: 768px)" srcset="./assets/images/hero-desktop.jpg">
+      <img src="assets/images/hero-mobile.jpg" alt="lady in orange" class="w-full md:h-full">
+    </picture>
+
+    <div class="md:bg-[url('../assets/images/bg-pattern-desktop.svg')] bg-[bg-\[center_top_1rem\]] text-center md:text-left flex flex-col gap-7 md:gap-10 md:h-full mt-[4.5rem] md:mt-[0.44rem] justify-center md:px-[5%] lg:px-[7%] xl:pl-[11%] xl:pr-[17%] 2xl:pr-[25%] md:w-[58%] flex-1 ">  
+        <h1 class="uppercase font-semibold text-[2.55rem] md:text-[3.1rem] lg:text-[4.125rem] md:mt-[82px] tracking-[0.2rem] md:tracking-[1.5rem] text-dark-grayish-red"><span
+            class="block text-desaturated-red font-light mb-[1.2rem] md:mb-11">We're</span> coming <span class="block mt-[1.2rem] md:mt-11">soon</span></h1>
+        <p class="text-desaturated-red text-sm md:text-base leading-[1.7] md:leading-[1.8] px-8 md:px-0">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+        <form novalidate class="flex flex-col relative align-middle px-8 md:px-0 mb-5 md:mb-0">
+          <input id="email" type="email" placeholder="Email Address"
+            class="block bg-[inherit] w-full border rounded-full px-6 md:px-8 py-3 md:py-[0.94rem] placeholder:text-desaturated-red/50 border-desaturated-red/50 focus:outline-none focus:border-[0.18rem] focus:border-soft-red">
+          <button type="submit" aria-label="Submit" class="bg-[linear-gradient(135deg,_hsl(0,80%,86%),_hsl(0,74%,74%))] w-[70px] md:w-[100px]  h-full rounded-full absolute right-5 md:right-[-1rem] hover:shadow-md "><img src="assets/images/icon-arrow.svg" alt="right arrow" class="mx-auto"></button>
+          <img src="assets/images/icon-error.svg" alt="error" class="absolute right-[6rem] top-4 form-error">
+        </form>
+        <p class="pl-6 md:pl-8 mt-[-2rem] text-[hsl(359,66%,74%)] font-medium  form-error">Please provide a valid email</p>  
+    </div>
+  </main>
+
+  <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer> -->
+
+  <script src="assets/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+button:hover {
+    background: hsl(359, 78%, 89%);
+}
+
+.form-error {
+    display: none;
+}
