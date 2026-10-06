@@ -1,0 +1,129 @@
+:root {
+  /* Colors */
+  --darkCyan: hsl(185, 75%, 39%);
+  --veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+  --darkGrayishBlue: hsl(227, 10%, 46%);
+
+  /* neutral */
+  --darkGray: hsl(0, 0%, 59%);
+
+  --card-background: hsl(0, 0%, 100%);
+  /* font */
+  --font-primary: "Kumbh Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--darkCyan);
+  background-image: url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+  background-size: 109vw 142vh, 54vw 90vh;
+  background-position: top -67vh left -60vw, bottom -45vh right -13vh;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+@media (max-width: 620px) {
+  body {
+    background-size: 65vw 61vh, 107vw 96vh;
+    background-position: top -41vw left -14vh, bottom -52vh right -54vw;
+  }
+}
+
+h1,
+h2 {
+  color: var(--veryDarkDesaturatedBlue);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 23.75rem;
+  width: 20.5rem;
+  background-color: var(--card-background);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card-banner {
+  background-image: url("../images/bg-pattern-card.svg");
+  height: 8.75rem;
+}
+
+/* -USER PROFILE- */
+.card-body .profile {
+  height: 9.3125rem;
+  display: grid;
+  place-items: center;
+}
+
+.card-body .profile img {
+  margin-top: -65px;
+  border: 0.5rem solid var(--card-background);
+  border-radius: 50%;
+}
+
+.card-body .profile h1 {
+  margin-top: -1rem;
+}
+
+h1 span {
+  color: var(--darkGray);
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+.card-body .profile p {
+  font-size: 0.8rem;
+  margin-top: -2.5rem;
+}
+
+.line {
+  height: 1px;
+  background-color: hsl(0, 6%, 91%);
+}
+
+/* USER DETAILS SECTION- followers, likes, photos */
+.user-detail {
+  height: 5.375rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  padding: 1rem;
+}
+
+.user-detail div {
+  text-align: center;
+}
+
+/* FOOTER */
+.attribution {
+  color: #ffffff;
+  position: absolute;
+  bottom: 1rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(226, 99%, 50%);
+}
+
+/* auxillary classes */
+.text-gray {
+  color: var(--darkGray);
+  font-size: 0.7rem;
+  letter-spacing: 0.08ch;
+}
+
+
