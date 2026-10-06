@@ -1,0 +1,35 @@
+@media (min-width: 40rem) and (max-width: 67rem) {
+  .grid-container {
+    padding-inline: min(5%);
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-areas:
+      "daniel daniel"
+      "jonathan kira"
+      "jeanette kira"
+      "patrick patrick";
+
+    .card-body {
+      &__summary {
+        margin-block: 3%;
+      }
+
+      &__text {
+        font-size: 110%;
+      }
+    }
+  }
+}
+
+@media (min-width: 67rem) {
+  body {
+    height: 100vh;
+  }
+  .grid-container {
+    grid-template-columns: repeat(5, 16rem);
+    // padding: min(0);
+    width: 69.4375rem;
+    grid-template-areas:
+      "daniel daniel jonathan kira"
+      "jeanette patrick patrick kira";
+  }
+}

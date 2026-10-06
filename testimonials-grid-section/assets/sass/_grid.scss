@@ -1,0 +1,121 @@
+.grid-container {
+  display: grid;
+  row-gap: 1.5rem;
+  column-gap: 1.8rem;
+  grid-template-columns: 1fr;
+  padding: 1.25rem;
+  grid-template-areas:
+    "daniel"
+    "jonathan"
+    "jeanette"
+    "patrick"
+    "kira";
+
+  .card {
+    padding: 1.5rem 1.875rem 1.875rem 1.875rem;
+    border-radius: 0.4rem;
+    .profile {
+      display: flex;
+      gap: 0.8125rem;
+
+      &__image {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100%;
+      }
+
+      &__detail {
+        &__name {
+          color: $light-gray;
+          font-weight: 600;
+        }
+
+        &__status {
+          color: $light-gray-status;
+          font-size: smaller;
+        }
+      }
+    }
+
+    .card-body {
+      &__summary {
+        color: $light-gray;
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-block: 1.125rem;
+      }
+
+      &__text {
+        line-height: 1.5;
+        color: $light-gray-text;
+        font-size: 0.8125rem;
+      }
+    }
+  }
+
+  .text-dark {
+    background-color: $white;
+
+    :is(.card-body__summary, .profile__detail__name) {
+      color: $very-dark-grayish-blue;
+    }
+
+    .profile__detail__status {
+      color: $very-dark-grayish-blue-status;
+    }
+
+    .card-body__text {
+      font-weight: 500;
+      color: $very-dark-grayish-blue-text;
+      line-height: 1.5;
+    }
+  }
+
+  .daniel {
+    background-color: $moderate-violet;
+    grid-area: daniel;
+    position: relative;
+
+    .profile__image {
+      outline: 2px solid $light-gray-text;
+    }
+
+    .card-body {
+      isolation: isolate;
+    }
+  }
+
+  .jonathan {
+    background-color: $very-dark-grayish-blue;
+    grid-area: jonathan;
+  }
+
+  .jeanette {
+    grid-area: jeanette;
+  }
+
+  .patrick {
+    background-color: $very-dark-blackish-blue;
+    grid-area: patrick;
+
+    .profile__image {
+      outline: 2px solid $moderate-violet;
+    }
+  }
+
+  .kira {
+    grid-area: kira;
+  }
+}
+
+
+.daniel::before {
+    content: '\201c';
+    color: hsla(263, 85%, 71%, 0.962);
+    position: absolute;
+    font-size: 25rem;
+    top: -4.8rem;
+    right: 0;
+    margin-right: 1.5rem;
+  }
+

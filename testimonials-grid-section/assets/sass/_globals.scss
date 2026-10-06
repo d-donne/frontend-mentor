@@ -1,0 +1,29 @@
+*,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ff-primary;
+  background-color: $light-grayish-blue;
+  display: grid;
+  place-items: center;
+  font-size: $font-m;
+  font-weight: 500;
+}
+
+
+span {
+  display: block;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
