@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/output.css">
+  <title>Frontend Mentor | NFT preview card component</title>
+</head>
+
+<body class="font-ff-primary text-[15px] text-soft-blue bg-bg-primary grid h-screen place-items-center">
+  <main class="w-[17.5rem] h-[29.8rem] bg-bg-card rounded-xl p-5 flex flex-col gap-[13px] shadow-2xl">
+    <div class="relative image">
+      <a href="#" class="block absolute w-full h-full rounded-md bg-cyan/40 view opacity-0 duration-500 ease-out">
+        <img src="./images/icon-view.svg" class="absolute top-[40%] left-[40%]">
+      </a>
+      <img src="./images/image-equilibrium.jpg" alt="equilibrium" class="rounded-md">  
+    </div>
+
+    <a href="#">
+      <h1 class="text-lg text-white font-semibold hover:text-cyan">Equilibrium #3429</h1>
+    </a>
+
+    <p class="">Our Equilibrium collection promotes balance and calm.</p>
+
+    <div class="flex items-center text-sm">
+      <div class="flex items-center text-cyan gap-1">
+        <img src="./images/icon-ethereum.svg" alt="etherium icon" class="h-4 hover:">
+        <span>0.041ETH</span>
+      </div>
+      <div class="flex items-center ml-auto text-sm gap-1">
+        <img src="./images/icon-clock.svg" alt="clock icon" class="h-[14px]">
+        <span class="whitespace-nowrap">3 days left</span>
+      </div>
+    </div>
+
+    <hr class="text-very-dark-blue mt-2">
+
+    <div class="flex gap-4 items-center text-sm">
+      <img src="./images/image-avatar.png" alt="" class="h-6 outline outline-1 outline-white rounded-full">
+      <p class="">Creation of <a href="#" class="text-white font-medium hover:text-cyan">Jules Wyvern</a></p>
+    </div>
+  </main>
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+
+</html>
