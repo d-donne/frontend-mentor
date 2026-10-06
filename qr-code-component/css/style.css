@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+
+/* colors */
+:root {
+  --white: hsl(0, 0%, 100%);
+  --lightGray: hsl(212, 45%, 89%);
+  --grayishBlue: hsl(220, 15%, 55%);
+  --darkBlue: hsl(218, 44%, 22%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  background-color: var(--lightGray);
+  width: 100svw;
+  height: 100svh;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+#main-card {
+  background-color: var(--white);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 20rem;
+  padding: 1rem;
+}
+
+.card-img {
+  border-radius: 0.9rem;
+}
+
+.card-title {
+  color: var(--darkBlue);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card-text {
+  color: var(--grayishBlue);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+
+
+.card-body {
+  text-align: center;
+  margin-inline: 0.8rem;
+}
+
+.card-body > * {
+  margin-bottom: 1.2rem;
+}
+
+
+.attribution {
+  position: absolute;
+  padding: 1rem;
+  bottom: 1rem;
+  font-size: 0.7rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
