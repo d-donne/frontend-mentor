@@ -1,0 +1,45 @@
+.container {
+  .form {
+    .form-control {
+      position: relative;
+
+      img {
+        visibility: hidden;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+
+      small {
+        position: absolute;
+        visibility: hidden;
+        right: 0.1rem;
+      }
+    }
+
+    .success {
+      input {
+        border: 2px solid green;
+      }
+      .success-icon {
+            visibility: visible;
+        }
+
+       
+    }
+
+    .error {
+      input {
+        border: 2px solid red;
+      }
+      .error-icon {
+            visibility: visible;
+        }
+
+    small {
+        visibility: visible;
+        color: red;
+    }
+    }
+  }
+}

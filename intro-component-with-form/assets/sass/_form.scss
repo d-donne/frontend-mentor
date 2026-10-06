@@ -1,0 +1,80 @@
+.container {
+  padding: 5.625rem 1.5rem;
+  text-align: center;
+
+  .intro {
+    color: $white;
+
+    &__heading {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    &__text {
+      margin-block: 1.875rem 4.375rem;
+      font-weight: 500;
+    }
+  }
+
+  .form-section {
+    &__intro {
+      background-color: $blue;
+      font-weight: 400;
+      padding: 1.25rem 4rem;
+      color: $grayish-blue;
+      margin-bottom: 1.5rem;
+
+      strong {
+        color: $white;
+        font-weight: 600;
+      }
+    }
+
+    .form {
+      background-color: $white;
+      display: flex;
+      flex-direction: column;
+      gap: 2.8125rem;
+      padding: 1.5rem;
+
+      
+
+      input {
+        font-family: inherit;
+        padding: 1rem 1.5rem;
+        border: 0.01rem solid $grayish-blue;
+        border-radius: 0.3rem;
+        font-weight: 600;
+        width: 100%;
+      }
+
+      
+      .form__submit {
+        font-weight: 700;
+        border: none;
+        color: $white;
+        background-color: $green;
+        cursor: pointer;
+
+      }
+
+      .form__submit:hover {
+            opacity: 0.8;  
+      }
+
+      &__terms {
+        color: $grayish-blue;
+        padding-inline: 1rem;
+        font-size: 0.7rem;
+        font-weight: 600;
+        a {
+          color: $red;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+ 
+}
+

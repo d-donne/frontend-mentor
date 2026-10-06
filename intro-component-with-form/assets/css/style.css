@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 100%, 74%);
+  background-image: url(../images/bg-intro-mobile.png);
+  font-size: 1rem;
+  font-weight: 400;
+  width: 100svw;
+  overflow-x: hidden;
+}
+
+input {
+  display: block;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.br {
+  border-radius: 0.5rem;
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 5px rgba(108, 43, 43, 0.292);
+}
+
+@media (min-width: 60rem) {
+  body {
+    background-image: url(../images/bg-intro-desktop.png);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  .container {
+    display: flex;
+    width: 77%;
+    align-items: center;
+  }
+  .container > div {
+    width: min(90%, 544px);
+  }
+  .container .intro {
+    text-align: left;
+    padding-right: 2rem;
+  }
+  .container .intro .intro__heading {
+    margin-top: 5rem;
+    padding-right: 9rem;
+    font-size: 2.5rem;
+  }
+  .container .intro__text {
+    margin-top: 1.1rem !important;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.container {
+  padding: 5.625rem 1.5rem;
+  text-align: center;
+}
+.container .intro {
+  color: hsl(0, 0%, 100%);
+}
+.container .intro__heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.container .intro__text {
+  margin-block: 1.875rem 4.375rem;
+  font-weight: 500;
+}
+.container .form-section__intro {
+  background-color: hsl(248, 32%, 49%);
+  font-weight: 400;
+  padding: 1.25rem 4rem;
+  color: hsl(246, 25%, 77%);
+  margin-bottom: 1.5rem;
+}
+.container .form-section__intro strong {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+}
+.container .form-section .form {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 2.8125rem;
+  padding: 1.5rem;
+}
+.container .form-section .form input {
+  font-family: inherit;
+  padding: 1rem 1.5rem;
+  border: 0.01rem solid hsl(246, 25%, 77%);
+  border-radius: 0.3rem;
+  font-weight: 600;
+  width: 100%;
+}
+.container .form-section .form .form__submit {
+  font-weight: 700;
+  border: none;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(154, 59%, 51%);
+  cursor: pointer;
+}
+.container .form-section .form .form__submit:hover {
+  opacity: 0.8;
+}
+.container .form-section .form__terms {
+  color: hsl(246, 25%, 77%);
+  padding-inline: 1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+.container .form-section .form__terms a {
+  color: hsl(0, 100%, 74%);
+  font-weight: 600;
+}
+
+.container .form .form-control {
+  position: relative;
+}
+.container .form .form-control img {
+  visibility: hidden;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.container .form .form-control small {
+  position: absolute;
+  visibility: hidden;
+  right: 0.1rem;
+}
+.container .form .success input {
+  border: 2px solid green;
+}
+.container .form .success .success-icon {
+  visibility: visible;
+}
+.container .form .error input {
+  border: 2px solid red;
+}
+.container .form .error .error-icon {
+  visibility: visible;
+}
+.container .form .error small {
+  visibility: visible;
+  color: red;
+}/*# sourceMappingURL=style.css.map */
