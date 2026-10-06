@@ -1,0 +1,123 @@
+.header {
+
+    &__menu-toggle {  //Mobile menu toggle
+
+        > span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $darkBlue;
+            transition-duration: 300ms;
+            transform-origin: 3px 1px;
+
+            &:not(:last-child) {
+            margin-bottom: 5px;
+            }
+        }   
+        
+    }
+    
+    &.open {
+        .header__menu-toggle {
+
+            >span:first-child {
+                transform: rotate(45deg);
+            }
+
+            >span:nth-child(2) {
+                opacity: 0;
+            }
+
+            >span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+
+        .overlay {
+            visibility: visible;
+
+        }
+
+        .header__menu {
+            visibility: visible;
+            z-index: 99;
+        }
+
+    }
+
+    nav {
+        padding-block: 1.0625rem;
+        font-size: $font-sm;
+    }
+
+    &__logo {
+
+        img {
+            width: 8.8125rem;
+            height: 1.375rem;
+        }
+    }
+
+
+    &__links {
+
+        a {
+          color: $grayishBlue;  
+        //   transition: all 400ms ease-in-out;
+          display: inline-block;
+          padding: 5px ;
+          height: 25px;
+        }
+
+        a:not(:last-child) {
+            margin-right: 30px;
+        }
+        
+        a:hover {
+            color: $darkBlue;
+        }
+
+        
+        a:hover::after {
+            content: "";
+            display: block;
+            height: 3px;
+            background: $color-primary;
+            margin-top: 12px;
+            // add transition for background
+        }
+
+            
+    }
+
+    &__menu { //mobile menu
+        position: absolute;
+        background-color: $white;
+        width: 90vw;
+        margin: 1.5rem 5vw;
+        padding: 1.625rem;
+        border-radius: 5px;
+        visibility: hidden;
+
+        a {
+            color: $darkBlue;
+            display: block;
+            padding: 0.625rem;
+            text-align: center;
+        }    
+
+    }
+
+    .overlay {
+        position: absolute;
+        visibility: hidden;
+        width: 100vw;
+        top: 3.75rem;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient($darkBlue, transparent);
+        // background-color: $darkBlue;  //fallback
+    }
+
+
+}

@@ -1,0 +1,46 @@
+.hero {
+    @include breakpoint-up(medium) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    &__image {
+        position: relative;
+        background-image: url('/assets/images/bg-intro-mobile.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 15.5rem;
+        // border: 1px solid red;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url("/assets/images/image-mockups.png");
+            background-size: 95%;
+            background-repeat: no-repeat;
+            background-position: center bottom ;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        height: 200px;
+        
+        h1 {
+            color: $darkBlue;
+            font-size: 2.31rem;
+            line-height: 1.15;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            
+        }
+
+        p {
+            line-height: 1.5;
+            margin-bottom: 2.25rem;
+        }
+    }
+}
