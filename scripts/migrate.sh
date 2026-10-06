@@ -10,8 +10,6 @@ REPOS=(
   "article-preview-component"
   "base-apparel-coming-soon-page"
   "nft-preview-card-component"
-  "news-homepage"
-  "tip-calculator-app"
   "single-price-grid-component"
   "intro-component-with-form"
   "testimonials-grid-section"
