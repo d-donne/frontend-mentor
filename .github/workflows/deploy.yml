@@ -1,0 +1,86 @@
+# Builds every top-level folder (vanilla, React, Vue) and publishes
+# each at https://<user>.github.io/<repo>/<folder>/
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build all challenges
+        run: |
+          REPO_NAME="${GITHUB_REPOSITORY#*/}"
+          mkdir -p _site
+
+          for dir in */; do
+            name="${dir%/}"
+            case "$name" in _site|node_modules|.github) continue ;; esac
+
+            # Framework project: has a build script
+            if [ -f "$name/package.json" ] && grep -q '"build"' "$name/package.json"; then
+              echo "::group::Building $name"
+              if ! (
+                cd "$name"
+                npm ci || npm install
+                export PUBLIC_URL="/$REPO_NAME/$name"   # Create React App
+                if ls vite.config.* >/dev/null 2>&1; then
+                  npm run build -- --base="/$REPO_NAME/$name/"   # Vite (React or Vue)
+                else
+                  npm run build
+                fi
+              ); then
+                echo "::warning::Build failed for $name, skipping"
+                echo "::endgroup::"
+                continue
+              fi
+              echo "::endgroup::"
+
+              out=""
+              for d in dist build; do
+                if [ -d "$name/$d" ]; then out="$name/$d"; break; fi
+              done
+              if [ -n "$out" ]; then
+                mkdir -p "_site/$name"
+                cp -r "$out"/. "_site/$name/"
+              fi
+
+            # Plain HTML/CSS/JS project
+            elif [ -f "$name/index.html" ]; then
+              mkdir -p "_site/$name"
+              cp -r "$name"/. "_site/$name/"
+            fi
+          done
+
+          # Optional landing page listing all challenges
+          if [ -f index.html ]; then cp index.html _site/; fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
